@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Basic Card</title>
   <link rel="stylesheet" href="./index.css">
   <script type="module" src="./index.js"></script>
 </head>
@@ -13,26 +13,52 @@
 <body>
   <div class="card">
     <div class="card-header">
-      <img class="img-bg" src="https://picsum.photos/id/1033/640/360" alt="">
-      <img class="avatar" src="/assets/hache_raw.png" alt="">
+      <img class="img-bg" src="https://picsum.photos/id/1033/640/360" alt="Background image">
+      <img class="avatar" src="/assets/hache_raw.png" alt="Avatar">
     </div>
     <div class="card-body">
       <div class="card-title">
         <h1>Hache_raw</h1>
-        <p>Tenerife, Spain</p>
+        <div class="location">
+          <svg role="img">
+            <use xlink:href="/assets/icons.svg#location"></use>
+          </svg>
+          <em>Tenerife, Spain</em>
+        </div>
       </div>
-      <div class="card-description"></div>
-      <button class="btn btn-follow"></button>
+      <div class="card-text">
+        Hache_raw es un desarrollador web al que le gusta probar nuevas tecnologías y hacer pequeños proyectos como
+        este. Sobretodo, le gusta aprender enseñando.
+      </div>
+      <a href="https://twitter.com/intent/follow?user_id=2302119295" class="btn">Follow</a>
     </div>
     <div class="card-footer">
       <div class="card-footer-item">
-        <p class="small muted"></p>
-        <p class="stats">
-          <svg class="icon" role="img">
-            <use xlink:href="#icon-heart"></use>
+        <span>Posts</span>
+        <div class="stats">
+          <svg role="img">
+            <use xlink:href="/assets/icons.svg#posts"></use>
           </svg>
-          <span class="stats-number"></span>
-        </p>
+          <span class="stats-number">1337</span>
+        </div>
+      </div>
+      <div class="card-footer-item">
+        <span>Followers</span>
+        <div class="stats">
+          <svg role="img">
+            <use xlink:href="/assets/icons.svg#followers"></use>
+          </svg>
+          <span class="stats-number">69</span>
+        </div>
+      </div>
+      <div class="card-footer-item">
+        <span>Following</span>
+        <div class="stats">
+          <svg role="img">
+            <use xlink:href="/assets/icons.svg#following"></use>
+          </svg>
+          <span class="stats-number">420</span>
+        </div>
       </div>
     </div>
   </div>

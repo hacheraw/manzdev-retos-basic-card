@@ -2,7 +2,8 @@
   font-family: Montserrat;
   src:
     local("Montserrat"),
-    url("/assets/fonts/Montserrat-VariableFont_wght.woff2") format("woff2" supports variations);
+    url("/assets/fonts/Montserrat-VF.woff2") format("woff2 supports variations"),
+    url("/assets/fonts/Montserrat-VF.woff2") format("woff2-variations");
   font-weight: 100 900;
   font-stretch: 50% 200%;
 }
@@ -18,10 +19,11 @@
 
 html,
 body {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -33,7 +35,11 @@ body {
 }
 
 .card {
-  width: 400px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  width: 450px;
+  aspect-ratio: 5 / 8;
   max-width: 90%;
   overflow: hidden;
   border-radius: 10px;
@@ -47,8 +53,9 @@ body {
 
   & .card-header {
     position: relative;
-    aspect-ratio: 2 / 1;
+    aspect-ratio: 1 / 0.44;
     border-bottom: 3px solid var(--accent-color);
+    background-color: var(--accent-color);
 
     & .img-bg {
       width: 100%;
@@ -93,13 +100,92 @@ body {
   }
 
   & .card-body {
+    text-align: center;
     padding: 3rem 2rem 2rem;
 
     & .card-title {
-      text-align: center;
+      margin-bottom: 2rem;
 
       & h1 {
-        margin: 0;
+        margin: 0 0 0.2rem;
+      }
+
+      & .location {
+        display: flex;
+        justify-content: center;
+        color: var(--text-color-alt);
+
+        & svg {
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+
+        & em {
+          font-size: 1rem;
+          font-weight: 450;
+        }
+      }
+    }
+
+    & .card-text {
+      text-align: left;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      margin-bottom: 2rem;
+    }
+
+    & .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      font-weight: 666;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: var(--text-color-accent);
+      border: 2px solid var(--text-color-accent);
+      border-radius: 2rem;
+      background: transparent;
+      transition: all 0.3s;
+
+      &:hover {
+        background: var(--text-color-accent);
+        color: #fff;
+      }
+    }
+  }
+
+  & .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    text-align: center;
+
+    & .card-footer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      padding: 0.8rem 0;
+
+      &:not(:last-child) {
+        border-right: 1px solid #ddd;
+      }
+
+      & > span {
+        font-size: 0.9rem;
+        color: var(--text-color-muted);
+      }
+
+      & .stats {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+
+        & svg {
+          width: 1.2rem;
+          height: 1.2rem;
+          color: #888;
+        }
       }
     }
   }
