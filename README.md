@@ -5,7 +5,7 @@
 ## Datos
 
 - 🦄 **Desarrollador/a:** *Hache_raw*
-- 🐇 **Link a red social:** *https://twitter.com/nombre*
+- 🐇 **Link a red social:** *https://twitter.com/hache_raw*
 - 🦾 **Perfil:** *Avanzado*
 - 💬 **Un comentario breve o frase ingeniosa**: *Eso se puede hacer...*
 
